@@ -1,6 +1,7 @@
 *.log
 *.pot
 *.pyc
+apache/
 local_settings.py
 ENV/
 media/
