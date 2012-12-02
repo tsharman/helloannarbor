@@ -1,0 +1,61 @@
+@import "base.less";
+
+#message, #error {
+    margin-top: 40px;
+    font-weight: 600;
+}
+#message {
+    color: #54c56f;
+}
+#error {
+    color: red;
+}
+
+#tag_list {
+    width: 300px;
+}
+    #tag_list .tag {
+        font-size: 13px;
+        cursor: pointer;
+        margin: 5px 10px 0px 0px;
+        display: inline-block;
+    }
+    #tag_list .selected {
+        font-weight: 600;
+    }
+
+#join_form {
+    margin-top: 50px;
+}
+    #join_form input {
+        margin-top: 10px;
+    }
+        #join_form input:focus {
+            outline: none;
+        }
+    #join_form input[type="text"] {
+        padding: 5px 0px;
+        color: #666;
+        font-size: 13px;
+        border: none;
+        border-bottom: 1px dotted #444;
+        display: block;
+    }
+    #join_form input[type="submit"] {
+        margin-top: 20px;
+    }
+    #join_form .formset {
+    }
+        #join_form .formset input {
+            display: inline-block;
+            margin-right: 20px;
+        }
+    #join_form h3 {
+        width: 400px;
+        font-size: 14px;
+        margin-top: 40px;
+        display: block;
+    }
+    #join_form .btn {
+        margin-top: 20px;
+    }

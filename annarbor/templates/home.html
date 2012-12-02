@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/home.js"></script>
+<link rel=stylesheet href="{{ STATIC_URL }}less/home.less" />
+{% endblock %}
+
+{% block content %}
+    <h3>HelloAnnArbor is a showcase of Ann Arbor's talent.</h3>
+    <h3>Scroll down and meet Ann Arbor's community of builders, creatives and visionaries.</h3>
+    <div id="people_list">
+        {% for creative in creatives %}
+            <a class="creative" href="{{ creative.link }}">
+                <div class="shadow">
+                </div>
+                <div class="name">
+                    <p>
+                    {{ creative.first_name }}
+                    {{ creative.last_name }}
+                    </p>
+                </div>
+                <img src="{{ creative.photo.url }}" />
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

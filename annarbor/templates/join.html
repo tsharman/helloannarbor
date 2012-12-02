@@ -1,0 +1,45 @@
+{% extends "base.html"%}
+
+{% block head %}
+    <link rel=stylesheet href="{{ STATIC_URL }}less/join.less" />
+    <script type="text/javascript" src="{{ STATIC_URL}}js/join.js"></script>
+{% endblock %}
+
+{% block content %}
+{% if message %}
+    <div id="message">{{ message }}</div>
+{% endif %}
+{% if error %}
+    <div id="error">{{ error }}</div>
+{% endif %}
+<div id="join_form">
+    <h3>Submit your information and be part of a collective of builders, creatives and visionaries in Ann Arbor, MI.</h3>
+    <form action="/join/"  enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        <h3>Your first and last name please.</h3>
+        <div class="formset">
+            <input type="text" name="first_name" placeholder="John" />
+            <input type="text" name="last_name" placeholder="Smith" />
+        </div>
+        <h3>Select a photo of yourself. Must be a square and at least 250x250.</h3>
+        <input type="file" name="photo" />
+        <h3>A personal website or link that really captures you.</h3>
+        <input type="text" name="link" placeholder="http://john.me" />
+        <h3>Select up to 3 tags that describes what you do:</h3>
+        <div id="tag_list">
+            <div class="tag" data-tag-name="food">Food</div>
+            <div class="tag" data-tag-name="design">Design</div>
+            <div class="tag" data-tag-name="film">Film</div>
+            <div class="tag" data-tag-name="software">Software</div>
+            <div class="tag" data-tag-name="hardware">Hardware</div>
+            <div class="tag" data-tag-name="photography">Photography</div>
+            <div class="tag" data-tag-name="illustrator">Illustrator</div>
+            <div class="tag" data-tag-name="writer">Writer</div>
+            <div class="tag" data-tag-name="musician">Music</div>
+            <div class="tag" data-tag-name="dance">Dance</div>
+            <div class="tag" data-tag-name="theater">Theater</div>
+        </div>
+        <div class="btn" id="submit_join_btn">Join</div>
+    </form>
+</div>
+{% endblock %}
