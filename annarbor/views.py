@@ -5,7 +5,7 @@ from annarbor.models import Creative, Tag
 from annarbor.forms import CreativeForm
 
 def home(request):
-    creatives = Creative.objects.filter(approved = True)
+    creatives = Creative.objects.filter(approved = True).order_by('?')
     return render_to_response('home.html', { 'creatives' : creatives}, context_instance=RequestContext(request))
 
 def about(request):
