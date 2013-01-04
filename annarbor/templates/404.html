@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ STATIC_URL }}less/error.less">
+{% endblock %}
+
+{% block content %}
+<div id="container">
+    <h3>Sorry, that page doesn't seem to exist.</h3>
+    <h3>Here is a cool photo of Ann Arbor from the Creative Commons.</h3>
+    <img src="{{ STATIC_URL }}img/annarbor.jpg" />
+    <h3>"An Early Morning Start" for the delivery vans at Edward V. Hangsterfer's City Ice Company on Argo Pond, Ann Arbor, Mich. A real-photo postcard, dated [19]08</h3>
+</div>
+{% endblock %}

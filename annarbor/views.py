@@ -15,8 +15,11 @@ def join(request):
     if request.method == 'POST':
         f = CreativeForm(request.POST, request.FILES)
         if f.is_valid():
-
-            creative = f.save()
+            
+            creative = f.save(commit=False)
+            creative.approved = False
+            creative.save()
+            
             tags = request.POST.getlist('tags[]')
             for tag in tags:
                 t = Tag(creative = creative, name = tag)
