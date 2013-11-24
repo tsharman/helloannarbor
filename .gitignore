@@ -4,4 +4,5 @@
 apache/
 local_settings.py
 ENV/
+env/
 media/
