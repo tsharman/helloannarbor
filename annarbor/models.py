@@ -26,6 +26,7 @@ class Creative(models.Model):
         image = Image.open(self.photo)
         image.thumbnail(size, Image.ANTIALIAS)
         image.save(self.photo.path)
+
 class Tag(models.Model):
     creative = models.ForeignKey(Creative, related_name="tags")
     name = models.CharField(max_length=50)
