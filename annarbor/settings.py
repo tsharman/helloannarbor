@@ -1,10 +1,9 @@
 # Django settings for annarbor project
+import dj_database_url
 import os.path
 PROJECT_DIR = os.path.dirname(os.path.realpath(__file__))
 
-from annarbor.local_settings import *
-
-DEBUG = local_debug
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -13,6 +12,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
@@ -23,6 +23,9 @@ DATABASES = {
         'PORT': db_port,                      # Set to empty string for default. Not used with sqlite3.
     }
 }
+'''
+
+DATABASES = {'default': dj_database_url.config()}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
