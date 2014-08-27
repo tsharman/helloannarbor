@@ -1,8 +1,10 @@
 *.log
 *.pot
 *.pyc
+*.swp
 apache/
 local_settings.py
 ENV/
 env/
 media/
+annarbor/static/admin/
