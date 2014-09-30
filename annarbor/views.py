@@ -24,8 +24,6 @@ def join(request):
             for tag in tags:
                 t = Tag(creative = creative, name = tag)
                 t.save()
-
-
             
             return render_to_response('join.html', { 'message' : 'Thanks! Your profile has been submitted and should appear on the front page after its gone through some quality control.'}, context_instance = RequestContext(request))
         else:

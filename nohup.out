@@ -1,0 +1,27 @@
+2014-08-30 03:05:46 [4197] [INFO] Starting gunicorn 18.0
+2014-08-30 03:05:46 [4197] [INFO] Listening at: http://127.0.0.1:8000 (4197)
+2014-08-30 03:05:46 [4197] [INFO] Using worker: sync
+2014-08-30 03:05:46 [4202] [INFO] Booting worker with pid: 4202
+2014-08-30 03:05:55 [4197] [INFO] Handling signal: int
+2014-08-30 03:05:55 [4202] [INFO] Worker exiting (pid: 4202)
+2014-08-30 03:05:55 [4197] [INFO] Shutting down: Master
+2014-08-30 03:05:57 [4204] [INFO] Starting gunicorn 18.0
+2014-08-30 03:05:57 [4204] [INFO] Listening at: http://127.0.0.1:8000 (4204)
+2014-08-30 03:05:57 [4204] [INFO] Using worker: sync
+2014-08-30 03:05:57 [4209] [INFO] Booting worker with pid: 4209
+2014-08-30 03:10:20 [4339] [INFO] Starting gunicorn 18.0
+2014-08-30 03:10:20 [4339] [INFO] Listening at: http://0.0.0.0:8004 (4339)
+2014-08-30 03:10:20 [4339] [INFO] Using worker: sync
+2014-08-30 03:10:20 [4344] [INFO] Booting worker with pid: 4344
+2014-08-30 15:42:51 [4339] [INFO] Handling signal: hup
+2014-08-30 15:42:51 [4339] [INFO] Hang up: Master
+2014-08-30 15:42:51 [4204] [INFO] Handling signal: hup
+2014-08-30 15:42:51 [4204] [INFO] Hang up: Master
+2014-08-30 15:42:51 [9688] [INFO] Booting worker with pid: 9688
+2014-08-30 15:42:51 [9689] [INFO] Booting worker with pid: 9689
+2014-09-27 08:16:51 [9688] [INFO] Worker exiting (pid: 9688)
+2014-09-27 03:16:51 [9689] [INFO] Worker exiting (pid: 9689)
+2014-09-27 08:16:51 [4204] [INFO] Handling signal: term
+2014-09-27 08:16:51 [4339] [INFO] Handling signal: term
+2014-09-27 08:16:51 [4339] [INFO] Shutting down: Master
+2014-09-27 08:16:51 [4204] [INFO] Shutting down: Master

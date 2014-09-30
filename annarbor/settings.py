@@ -1,6 +1,8 @@
 # Django settings for annarbor project
 import dj_database_url
 import os.path
+import local_settings
+
 PROJECT_DIR = os.path.dirname(os.path.realpath(__file__))
 
 DEBUG = False
@@ -12,20 +14,11 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-'''
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': db_name,                      # Or path to database file if using sqlite3.
-        'USER': db_user,                      # Not used with sqlite3.
-        'PASSWORD': db_password,                  # Not used with sqlite3.
-        'HOST': db_host,                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': db_port,                      # Set to empty string for default. Not used with sqlite3.
-    }
-}
-'''
+# if 'DATABASE_URL' does no exist, then it's local machine
+if not os.environ.has_key('DATABASE_URL'):
+    database_url = local_settings.DATABASE_URL  
 
-DATABASES = {'default': dj_database_url.config()}
+DATABASES = {'default': dj_database_url.config(default=database_url)}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
